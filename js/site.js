@@ -37,7 +37,7 @@
     document.documentElement.lang = language;
     document.querySelectorAll("[data-i18n]").forEach((element) => {
       const key = element.dataset.i18n;
-      if (translations[language][key]) element.textContent = translations[language][key];
+      if (translations[language][key]) {\n        element.textContent = translations[language][key];\n        if (key === "characterFile") element.dataset.text = translations[language][key];\n      }
     });
     switcher.textContent = language === "ru" ? "RU / EN" : "EN / RU";
     switcher.setAttribute("aria-label", language === "ru" ? "Switch to English" : "Переключить на русский");

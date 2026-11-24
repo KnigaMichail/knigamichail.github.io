@@ -37,6 +37,19 @@ button { font: inherit; }
     linear-gradient(180deg, #090e0c 0%, #0c1511 52%, #090e0c 100%);
   background-size: 270px 230px, 370px 310px, 190px 260px, 310px 220px, 410px 350px, auto;
 }
+.starfield::before {
+  content: ""; position: absolute; inset: -3%;
+  pointer-events: none; opacity: .72;
+  background-image:
+    radial-gradient(2px 2px at 12% 22%, rgba(226,255,203,.95) 45%, transparent 70%),
+    radial-gradient(1px 1px at 28% 68%, rgba(190,231,156,.9) 45%, transparent 70%),
+    radial-gradient(2px 2px at 54% 14%, rgba(226,255,203,.85) 45%, transparent 70%),
+    radial-gradient(1px 1px at 73% 57%, rgba(190,231,156,.9) 45%, transparent 70%),
+    radial-gradient(2px 2px at 88% 34%, rgba(226,255,203,.9) 45%, transparent 70%),
+    radial-gradient(1px 1px at 43% 88%, rgba(190,231,156,.8) 45%, transparent 70%);
+  background-size: 430px 360px, 510px 440px, 570px 390px, 460px 520px, 620px 470px, 540px 510px;
+  animation: starTwinkle 5.8s ease-in-out infinite alternate, starDrift 70s linear infinite;
+}
 .starfield::after {
   content: ""; position: absolute; inset: 0; opacity: .13;
   background: repeating-linear-gradient(0deg, transparent 0 3px, rgba(180,214,139,.12) 4px);
@@ -91,6 +104,23 @@ h1 {
   border: 1px solid rgba(180,214,139,.5); box-shadow: 12px 12px 0 rgba(180,214,139,.07), 0 0 45px rgba(80,130,80,.1);
 }
 .panel-top { display: flex; justify-content: space-between; color: var(--green); font-size: 12px; margin-bottom: 16px; }
+.signal-label {
+  position: relative; display: inline-block; isolation: isolate;
+  text-shadow: 0 0 7px rgba(180,214,139,.55);
+  animation: signalFlicker 6.5s steps(1, end) infinite;
+}
+.signal-label::before, .signal-label::after {
+  content: attr(data-text); position: absolute; inset: 0; pointer-events: none;
+  overflow: hidden; opacity: 0;
+}
+.signal-label::before {
+  color: #d7f6ff; text-shadow: 2px 0 rgba(120,210,255,.8);
+  animation: signalGlitchA 6.5s steps(1, end) infinite;
+}
+.signal-label::after {
+  color: #e5c66c; text-shadow: -2px 0 rgba(229,198,108,.8);
+  animation: signalGlitchB 6.5s steps(1, end) infinite;
+}
 .portrait-frame { position: relative; min-height: 270px; display: grid; place-items: center; background: radial-gradient(ellipse, rgba(100,143,85,.2), transparent 68%), #0b120e; border: 1px solid var(--line); overflow: hidden; }
 .portrait { display: block; width: min(70%, 230px); aspect-ratio: 1; object-fit: cover; border: 3px solid rgba(180,214,139,.65); image-rendering: auto; filter: saturate(.82) contrast(1.05); }
 .corner { position: absolute; width: 20px; height: 20px; border-color: var(--green); border-style: solid; }
@@ -176,6 +206,32 @@ h2 { margin: 0; color: var(--green-bright); font: clamp(19px, 3vw, 27px)/1.55 va
 }
 
 @keyframes pulse { 0%,100% { opacity: .65; } 50% { opacity: 1; box-shadow: 0 0 18px var(--green); } }
+@keyframes starTwinkle {
+  0% { opacity: .28; filter: brightness(.7); }
+  35% { opacity: .85; filter: brightness(1.25); }
+  62% { opacity: .48; filter: brightness(.9); }
+  100% { opacity: .95; filter: brightness(1.4); }
+}
+@keyframes starDrift {
+  from { background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0; }
+  to { background-position: 85px -55px, -70px 90px, 55px 75px, 90px -65px, -85px -50px, 60px 80px; }
+}
+@keyframes signalFlicker {
+  0%, 91%, 93%, 100% { opacity: 1; }
+  92% { opacity: .48; }
+}
+@keyframes signalGlitchA {
+  0%, 90%, 94%, 100% { opacity: 0; clip-path: inset(0 0 100% 0); transform: none; }
+  91% { opacity: .85; clip-path: inset(0 0 58% 0); transform: translateX(2px); }
+  92% { opacity: .7; clip-path: inset(35% 0 32% 0); transform: translateX(-2px); }
+  93% { opacity: .8; clip-path: inset(72% 0 5% 0); transform: translateX(1px); }
+}
+@keyframes signalGlitchB {
+  0%, 90%, 94%, 100% { opacity: 0; clip-path: inset(100% 0 0 0); transform: none; }
+  91% { opacity: .75; clip-path: inset(62% 0 12% 0); transform: translateX(-2px); }
+  92% { opacity: .85; clip-path: inset(12% 0 67% 0); transform: translateX(2px); }
+  93% { opacity: .65; clip-path: inset(45% 0 38% 0); transform: translateX(-1px); }
+}
 @media (max-width: 760px) {
   .topbar { flex-wrap: wrap; gap: 12px; padding: 12px 18px; }
   .nav { order: 3; width: 100%; justify-content: space-between; gap: 8px; }

@@ -210,13 +210,16 @@ h2 { margin: 0; color: var(--green-bright); font: clamp(19px, 3vw, 27px)/1.55 va
 }
 .cosplay-gallery__meta {
   display: grid;
-  grid-template-columns: 70px minmax(0, 1fr);
-  gap: 4px 8px;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 4px 10px;
   align-items: baseline;
   font-size: 12px;
   line-height: 1.4;
 }
-.cosplay-gallery__meta-label { color: var(--muted); }
+.cosplay-gallery__meta-label {
+  color: var(--muted);
+  white-space: nowrap;
+}
 .cosplay-gallery__meta-value { color: var(--text); font-weight: 400; overflow-wrap: anywhere; }
 .cosplay-gallery-lightbox {
   position: fixed; z-index: 100; inset: 0; display: none; align-items: center;

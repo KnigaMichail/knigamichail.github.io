@@ -23,18 +23,45 @@ body {
 }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; }
-.void-space { position: fixed; inset: 0; overflow: hidden; isolation: isolate; background:
-  radial-gradient(ellipse at 50% 52%, rgba(18,27,45,.58), transparent 34%),
-  radial-gradient(ellipse at 17% 19%, rgba(20,50,77,.23), transparent 32%),
-  radial-gradient(ellipse at 87% 80%, rgba(40,22,61,.19), transparent 35%),
-  linear-gradient(145deg,#050811,#020307 60%,#070a12);
+.void-space {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  isolation: isolate;
+  background-color: #090e0c;
+  background-image:
+    radial-gradient(1px 1px at 8% 18%, rgba(220,245,195,.8) 50%, transparent 60%),
+    radial-gradient(2px 2px at 78% 28%, rgba(180,214,139,.65) 50%, transparent 60%),
+    radial-gradient(1px 1px at 45% 72%, rgba(220,245,195,.65) 50%, transparent 60%),
+    radial-gradient(1px 1px at 91% 82%, rgba(220,245,195,.6) 50%, transparent 60%),
+    radial-gradient(1px 1px at 24% 91%, rgba(180,214,139,.6) 50%, transparent 60%),
+    linear-gradient(180deg, #090e0c 0%, #0c1511 52%, #090e0c 100%);
+  background-size: 270px 230px, 370px 310px, 190px 260px, 310px 220px, 410px 350px, auto;
+}
+.void-space::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  opacity: .13;
+  background: repeating-linear-gradient(0deg, transparent 0 3px, rgba(180,214,139,.12) 4px);
+}
+.void-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 .void-nebula {
   position: absolute; inset: -20%;
   background:
-    radial-gradient(ellipse at 30% 40%, rgba(41,97,139,.13), transparent 30%),
-    radial-gradient(ellipse at 68% 62%, rgba(89,53,117,.12), transparent 28%),
-    radial-gradient(ellipse at 50% 50%, rgba(12,20,36,.35), transparent 47%);
+    radial-gradient(ellipse at 30% 40%, rgba(100,143,85,.18), transparent 30%),
+    radial-gradient(ellipse at 68% 62%, rgba(80,111,69,.13), transparent 28%),
+    radial-gradient(ellipse at 50% 50%, rgba(12,24,17,.4), transparent 47%);
   filter: blur(35px);
   animation: nebula-drift 26s ease-in-out infinite alternate;
 }

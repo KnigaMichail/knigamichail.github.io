@@ -16,7 +16,9 @@
       archiveLoading:"ЗАГРУЗКА АРХИВА…", archiveHint:"", videosTitle:"VIDEO TERMINAL",
       videosIntro:"Записи из моей ленты TikTok.", videoOpen:"ОТКРЫТЬ В TIKTOK",
       fanFilmsTitle:"FAN FILMS", fanFilmsIntro:"Постановочные сцены и фанатские видео.", fanFilmLabel:"ИЗБРАННАЯ РАБОТА", fanFilmCaption:"Постановочный фанатский ролик",
-      contactTitle:"Связь и координаты", vkCosplay:"Косплей", vkVideo:"Канал", mapLink:"Где поесть", vkButton:"СТРАНИЦА VK"
+      contactTitle:"Связь и координаты", vkCosplay:"Страница VK", vkVideo:"VK Видео", youtubeChannel:"YouTube канал", mapLink:"Где поесть",
+      projectsButton:"МОИ ПРОЕКТЫ ↗", projectsEyebrow:"404 // ОБЪЕКТ НЕ ОБНАРУЖЕН", projectsTitle:"МОИ ПРОЕКТЫ",
+      projectsDescription:"Здесь пока пусто. Сигнал уходит за горизонт событий.", projectsReturn:"ВЕРНУТЬСЯ В ГОЛОКРОН ↗"
     },
     en: {
       navProfile:"PROFILE", navCosplay:"COSPLAY", navVideos:"VIDEOS", navFanFilms:"FAN FILMS", navContact:"CONTACT",
@@ -32,7 +34,9 @@
       archiveLoading:"LOADING ARCHIVE…", archiveHint:"", videosTitle:"VIDEO TERMINAL",
       videosIntro:"Transmissions from my TikTok feed.", videoOpen:"OPEN ON TIKTOK",
       fanFilmsTitle:"FAN FILMS", fanFilmsIntro:"Fan films and staged scenes.", fanFilmLabel:"SELECTED WORK", fanFilmCaption:"Staged fan film",
-      contactTitle:"Contact & coordinates", vkCosplay:"Cosplay", vkVideo:"Channel", mapLink:"Food map", vkButton:"VK PROFILE"
+      contactTitle:"Contact & coordinates", vkCosplay:"VK Page", vkVideo:"VK Video", youtubeChannel:"YouTube Channel", mapLink:"Food map",
+      projectsButton:"MY PROJECTS ↗", projectsEyebrow:"404 // OBJECT NOT FOUND", projectsTitle:"MY PROJECTS",
+      projectsDescription:"Nothing here yet. The signal is fading beyond the event horizon.", projectsReturn:"RETURN TO HOLOCRON ↗"
     }
   };
 

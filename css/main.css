@@ -321,7 +321,7 @@ h2 { margin: 0; color: var(--green-bright); font: clamp(19px, 3vw, 27px)/1.55 va
 .contact-card:hover { background: var(--panel-soft); border-color: var(--green); }
 .contact-card span { color: var(--muted); font-size: 11px; }
 .contact-card strong { color: var(--green-bright); font-size: 17px; font-weight: 400; overflow-wrap: anywhere; }
-.vk-button { margin-top: 24px; }
+.projects-button { margin-top: 24px; }
 .footer {
   display: flex; justify-content: space-between; gap: 20px; padding: 25px max(5vw, 22px);
   color: var(--muted); border-top: 1px solid var(--line); font-size: 11px;

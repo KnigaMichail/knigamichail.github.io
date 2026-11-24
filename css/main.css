@@ -210,6 +210,45 @@ h2 { margin: 0; color: var(--green-bright); font: clamp(19px, 3vw, 27px)/1.55 va
 .text-link { display: inline-block; margin-top: 22px; color: var(--green); font-size: 14px; }
 .text-link:hover { color: var(--green-bright); }
 
+.fan-film-card {
+  padding: 22px;
+  border: 1px solid var(--line);
+  background: linear-gradient(145deg, rgba(25,41,31,.94), rgba(8,14,11,.98));
+  box-shadow: 5px 5px 0 rgba(180,214,139,.045);
+}
+.fan-film-card__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  margin-bottom: 16px;
+}
+.fan-film-card__index {
+  color: var(--green);
+  font-size: 12px;
+  letter-spacing: .08em;
+}
+.fan-film-card__title {
+  margin: 0;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 400;
+}
+.fan-film-player {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #060a08;
+}
+.fan-film-player iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
 .contact-card { display: flex; flex-direction: column; gap: 5px; padding: 17px 20px; transition: background .2s, border-color .2s; }
 .contact-card:hover { background: var(--panel-soft); border-color: var(--green); }
@@ -277,6 +316,7 @@ h2 { margin: 0; color: var(--green-bright); font: clamp(19px, 3vw, 27px)/1.55 va
   .profile-grid { grid-template-columns: 1fr; }
   .video-grid { grid-template-columns: 1fr; }
   .video-card { min-height: 155px; }
+  .fan-film-card { padding: 14px; }
   .content-section { padding-block: 62px; }
 }
 @media (max-width: 480px) {

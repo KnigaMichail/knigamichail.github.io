@@ -30,6 +30,27 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Generate cosplay image manifest
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from urllib.parse import quote
+
+          folder = Path("img/cosplay")
+          extensions = {".jpg", ".jpeg", ".png", ".webp", ".gif"}
+          images = []
+          for path in sorted(folder.iterdir(), key=lambda item: item.name.casefold()):
+              if path.is_file() and path.suffix.lower() in extensions:
+                  images.append({
+                      "name": path.name,
+                      "url": "./img/cosplay/" + quote(path.name, safe="")
+                  })
+          (folder / "manifest.json").write_text(
+              json.dumps({"images": images}, ensure_ascii=False, indent=2),
+              encoding="utf-8"
+          )
+          PY
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:

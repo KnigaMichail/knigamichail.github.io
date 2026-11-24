@@ -3,7 +3,7 @@
 
   const translations = {
     ru: {
-      navProfile:"ПРОФИЛЬ", navCosplay:"КОСПЛЕЙ", navVideos:"ВИДЕО", navContact:"КОНТАКТЫ",
+      navProfile:"ПРОФИЛЬ", navCosplay:"КОСПЛЕЙ", navVideos:"ВИДЕО", navFanFilms:"ФАН-ФИЛЬМЫ", navContact:"КОНТАКТЫ",
       heroEyebrow:"ПЕРСОНАЛЬНАЯ БАЗА ДАННЫХ // В СЕТИ",
       heroSubtitle:"Косплей. Саберфайтинг. Постановочные сцены.",
       heroDescription:"Персонажи из далёких галактик, костюмы и истории, которые оживают перед камерой.",
@@ -15,10 +15,11 @@
       cosplayTitle:"COSPLAY ARCHIVE", cosplayIntro:"Архив образов и перевоплощений. Новые фотографии появляются здесь автоматически.",
       archiveLoading:"ЗАГРУЗКА АРХИВА…", archiveHint:"", videosTitle:"VIDEO TERMINAL",
       videosIntro:"Записи из моей ленты TikTok.", videoOpen:"ОТКРЫТЬ В TIKTOK",
+      fanFilmsTitle:"FAN FILMS", fanFilmsIntro:"Постановочные сцены и фанатские видео.", fanFilmLabel:"ИЗБРАННАЯ РАБОТА", fanFilmCaption:"Постановочный фанатский ролик",
       contactTitle:"Связь и координаты", vkCosplay:"Косплей", vkVideo:"Канал", mapLink:"Где поесть", vkButton:"СТРАНИЦА VK"
     },
     en: {
-      navProfile:"PROFILE", navCosplay:"COSPLAY", navVideos:"VIDEOS", navContact:"CONTACT",
+      navProfile:"PROFILE", navCosplay:"COSPLAY", navVideos:"VIDEOS", navFanFilms:"FAN FILMS", navContact:"CONTACT",
       heroEyebrow:"PERSONAL CREATOR DATABASE // ONLINE",
       heroSubtitle:"Cosplay. Saberfighting. Staged scenes.",
       heroDescription:"Characters from distant galaxies, costumes and stories brought to life in front of the camera.",
@@ -30,6 +31,7 @@
       cosplayTitle:"COSPLAY ARCHIVE", cosplayIntro:"An archive of characters and transformations. New photos appear here automatically.",
       archiveLoading:"LOADING ARCHIVE…", archiveHint:"", videosTitle:"VIDEO TERMINAL",
       videosIntro:"Transmissions from my TikTok feed.", videoOpen:"OPEN ON TIKTOK",
+      fanFilmsTitle:"FAN FILMS", fanFilmsIntro:"Fan films and staged scenes.", fanFilmLabel:"SELECTED WORK", fanFilmCaption:"Staged fan film",
       contactTitle:"Contact & coordinates", vkCosplay:"Cosplay", vkVideo:"Channel", mapLink:"Food map", vkButton:"VK PROFILE"
     }
   };

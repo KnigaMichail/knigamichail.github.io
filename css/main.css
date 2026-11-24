@@ -142,8 +142,8 @@ h1 {
 .corner { position: absolute; width: 20px; height: 20px; border-color: var(--green); border-style: solid; }
 .corner-tl { top: 9px; left: 9px; border-width: 2px 0 0 2px; }
 .corner-br { bottom: 9px; right: 9px; border-width: 0 2px 2px 0; }
-.character-name { margin-top: 17px; color: var(--text); font: 12px var(--pixel); text-align: center; }
-.character-role { margin-top: 10px; text-align: center; color: var(--green); font-size: 12px; }
+.character-name { display: block; width: 100%; margin-top: 17px; color: var(--text); font: 12px var(--pixel); text-align: center; }
+.character-role { display: block; width: 100%; margin-top: 10px; text-align: center; color: var(--green); font-size: 12px; }
 .hero-coordinate { position: absolute; right: 0; bottom: 28px; color: rgba(180,214,139,.55); font-size: 11px; }
 .scanline { position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(0deg, transparent 0 5px, rgba(180,214,139,.025) 6px); }
 

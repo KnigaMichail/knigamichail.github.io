@@ -8,7 +8,7 @@
       heroSubtitle:"Косплей. Саберфайтинг. Постановочные сцены.",
       heroDescription:"Персонажи из далёких галактик, костюмы и истории, которые оживают перед камерой.",
       heroButton:"ОТКРЫТЬ АРХИВ", heroStatus:"ПЕРЕДАЧА АКТИВНА", characterFile:"ДОСЬЕ ПЕРСОНАЖА",
-      characterRole:"КОСПЛЕЕР / САБЕРФАЙТЕР", profileTitle:"Профиль персонажа",
+      characterRole:"КОСПЛЕЕР / САБЕРФАЙТЕР", profileTitle:"Досье автора",
       profileTerminal:"КРАТКОЕ ДОСЬЕ",
       profileText:"Kraus_Bombit — автор косплей-образов и постановочных сцен. Интересуюсь вселенной Star Wars, саберфайтингом, созданием костюмов и съёмкой фанатских видео.",
       skillCosplay:"КОСПЛЕЙ И КОСТЮМЫ", skillSaber:"САБЕРФАЙТИНГ", skillFilms:"ФАН-ФИЛЬМЫ И СЦЕНА", skillGalaxy:"ВСЕЛЕННАЯ STAR WARS",
@@ -24,7 +24,7 @@
       heroSubtitle:"Cosplay. Saberfighting. Staged scenes.",
       heroDescription:"Characters from distant galaxies, costumes and stories brought to life in front of the camera.",
       heroButton:"OPEN THE ARCHIVE", heroStatus:"TRANSMISSION ACTIVE", characterFile:"CHARACTER FILE",
-      characterRole:"COSPLAYER / SABERFIGHTER", profileTitle:"Character profile",
+      characterRole:"COSPLAYER / SABERFIGHTER", profileTitle:"Creator dossier",
       profileTerminal:"PERSONNEL RECORD",
       profileText:"Kraus_Bombit creates cosplay characters and staged scenes. Interested in the Star Wars universe, saberfighting, costume making and fan video production.",
       skillCosplay:"COSPLAY & COSTUMES", skillSaber:"SABERFIGHTING", skillFilms:"FAN FILMS & STAGE", skillGalaxy:"STAR WARS UNIVERSE",
@@ -66,6 +66,7 @@
       switcher.textContent = language === "ru" ? "RU / EN" : "EN / RU";
       switcher.setAttribute("aria-label", language === "ru" ? "Switch to English" : "Переключить на русский");
     }
+    document.dispatchEvent(new CustomEvent("site-language-change", { detail: { language } }));
   }
 
   if (switcher) {

@@ -52,7 +52,7 @@
   }
 
   function titleFromName(name) {
-    return name.replace(/\\.[^.]+$/, "").replace(/[_-]+/g, " ").trim();
+    return name.replace(/\.[^.]+$/, "").replace(/[_-]+/g, " ").trim();
   }
 
   function createMetaLine(label, value) {
